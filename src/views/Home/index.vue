@@ -37,12 +37,25 @@ export default {
 </script>
 
 <style lang ='scss' scoped>
+@import "~@/assets/styles/mixins.scss";
 .page-home {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: brown;
   .index-header {
+    /* border-bottom: 1px solid #ededed ; */
+    /* position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0px;
+      bottom: 0px;
+      background: #ededed;
+      transform: scaleY(0.5);
+    } */
+    @include border-bottom;
     display: flex;
     height: 44px;
     justify-content: space-between;
