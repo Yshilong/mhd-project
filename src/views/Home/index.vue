@@ -22,6 +22,7 @@
 <script>
 // 引入抽离出的插件
 import { Swiper, SwiperItem } from '@/components/Swiper'
+import { getBanner } from '@/api/cartoon'
 export default {
   name: 'Home',
   components: {
@@ -32,6 +33,12 @@ export default {
     changeHandler (payload) {
       console.log('index', payload)
     }
+  },
+  created () {
+    // 下载轮播图数据
+    getBanner().then(res => {
+      console.log(res)
+    })
   }
 }
 </script>
